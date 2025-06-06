@@ -26,4 +26,6 @@ Permasalahan utama yang kami coba selesaikan dalam project ini adalah bagaimana 
 pip install gymnasium[all] stable-baselines3 tensorboard
 pip install gym==0.21.0
 ```
-NOTICE: Menjalankannya lebih baik di VS Code atau Jupyter Notebook agar project berjalan lancar tanpa error 
+### Note
+- Menjalankannya lebih baik di VS Code atau Jupyter Notebook agar project berjalan lancar tanpa error
+- Dalam project ini, kode dibagi menjadi beberapa bagian menggunakan tanda "# %%", "# %%" adalah pembatas kode supaya bisa run per bagian tanpa harus menjalankan seluruh script.
