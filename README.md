@@ -1,4 +1,11 @@
 # FinproKomnum_CartpoleRL
+- Ananda Lestari - 2306226656
+- Fikra Zeka Neilshona - 2306227034
+- Muhammad Haidar Al Ghifari - 2306266792
+- Muhammad Gavin Jericho - 2306215002
+- Rafandra Gifarrel M.A - 2306216390
+- Raihanah Zakiyah Syukri - 2306202284
+
 
 # Reinforcement Learning CartPole with PPO
 
