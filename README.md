@@ -26,4 +26,4 @@ Permasalahan utama yang kami coba selesaikan dalam project ini adalah bagaimana 
 pip install gymnasium[all] stable-baselines3 tensorboard
 pip install gym==0.21.0
 ```
-## NOTICE: Cara Menjalankan di VS Code atau Jupyter Notebook
+NOTICE: Menjalankannya lebih baik di VS Code atau Jupyter Notebook agar project berjalan lancar tanpa error 
