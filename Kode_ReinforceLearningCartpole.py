@@ -1,5 +1,4 @@
-# %%
-
+# %% Import Library & Setup Environment
 import gym
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv
@@ -11,8 +10,8 @@ env = gym.make(environment_name, render_mode="human")
 
 log_path = os.path.join('Training', 'Logs')
 save_path = os.path.join('Training', 'Saved Models')
-# %%
 
+# %% Testing Random Agent
 episodes = 10
 for episode in range(1, episodes + 1):
     # Update for Gymnasium's reset
@@ -31,29 +30,31 @@ for episode in range(1, episodes + 1):
     print(f'Episode: {episode}, Score: {score}')
 env.close()
 
-# %%
+# %% PPO Model dan Training
 env = gym.make(environment_name, render_mode="human")
 env = DummyVecEnv([lambda: env])
 model = PPO('MlpPolicy', env, verbose = 1, tensorboard_log=log_path)
 model.learn(total_timesteps=500)
 
 
-#%%
+#%% Untuk menyimpan model yang sudah di train
 PPO_path = os.path.join('Training', 'Models', 'PPO_model_10000steps')
 model.save(PPO_path)
 
-#%%
+#%% Delete model
 del model
 # model = PPO.load('PPO_model', env=env)
 
-#%%
+#%% Load Model
 env = DummyVecEnv([lambda: gym.make('CartPole-v1', render_mode="human")])
 model = PPO.load('Training/Models/PPO_model_1000steps', env=env)
 
-#%%
+#%% Evaluasi Model PPO
 evaluate_policy(model, env, n_eval_episodes=10, render=True)
 env.close()
-# %%
+
+
+# %% Manual Testing PPO
 episode = 5
 for i in range(1, episode + 1):
     score = 0
@@ -69,8 +70,7 @@ for i in range(1, episode + 1):
             break
 
     env.close()
-# %%
-
+    
+# %% TensorBoard Path
 training_log_path = os.path.join('Logs', 'PPO_10')
 # !tensorboard --logdir={training_log_path}
-# %%
