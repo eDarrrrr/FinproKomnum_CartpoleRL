@@ -13,7 +13,7 @@ Permasalahan utama yang kami coba selesaikan dalam project ini adalah bagaimana 
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 - Python >= 3.8
 - Gymnasium / OpenAI Gym
